@@ -3,17 +3,17 @@ import Link from "next/link"
 import { CardHeader, CardContent, CardFooter, Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
-export default function Component() {
+export function single-post-view() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-[#ffffff]">
       <Card className="w-full max-w-md overflow-hidden">
         <CardHeader className="p-4 flex flex-row items-center">
-          <Link className="flex items-center gap-2 text-sm font-semibold text-black" href="#">
+          <Link className="flex items-center gap-2 text-sm font-semibold" href="#">
             <Avatar className="w-8 h-8 border">
-              <AvatarImage alt="@wuan.xyz" src="https://cdn.discordapp.com/attachments/1056360628551421953/1189155005249376316/GWZNm2h.jpg?ex=659d21e6&is=658aace6&hm=a5e4ecf56f545f83608d154d46ff65b5424c215fdda882976a719b1fcb6d24b6&" />
-              <AvatarFallback className="text-black">U</AvatarFallback>
+              <AvatarImage alt="@username" src="/placeholder-user.jpg" />
+              <AvatarFallback>U</AvatarFallback>
             </Avatar>
-            <span className="text-black">Juanito</span>
+            Username
           </Link>
         </CardHeader>
         <CardContent className="p-0">
@@ -21,24 +21,24 @@ export default function Component() {
             alt="Instagram Post"
             className="aspect-square object-cover w-full"
             height="400"
-            src="https://get.wallhere.com/photo/1080x1080-px-artwork-Ilya-Kuvshinov-1264881.jpg"
+            src="/placeholder.svg"
             width="400"
           />
         </CardContent>
         <CardFooter className="p-4">
           <div className="flex items-center">
-            <Button className="text-black" size="icon" variant="ghost">
-              <HeartIcon className="w-4 h-4 text-black" />
+            <Button size="icon" variant="ghost">
+              <HeartIcon className="w-4 h-4" />
               <span className="sr-only">Like</span>
             </Button>
-            <span className="text-xs ml-1 text-black">500</span>
-            <Button className="text-black" size="icon" variant="ghost">
-              <MessageCircleIcon className="w-4 h-4 text-black" />
+            <span className="text-xs ml-1">500</span>
+            <Button size="icon" variant="ghost">
+              <MessageCircleIcon className="w-4 h-4" />
               <span className="sr-only">Comment</span>
             </Button>
-            <span className="text-xs ml-1 text-black">50</span>
-            <Button className="text-black" size="icon" variant="ghost">
-              <SendIcon className="w-4 h-4 text-black" />
+            <span className="text-xs ml-1">50</span>
+            <Button size="icon" variant="ghost">
+              <SendIcon className="w-4 h-4" />
               <span className="sr-only">Share</span>
             </Button>
           </div>
@@ -47,6 +47,7 @@ export default function Component() {
     </div>
   )
 }
+
 
 function HeartIcon(props) {
   return (
